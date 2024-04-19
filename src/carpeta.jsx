@@ -6,7 +6,7 @@ function Carpeta(){
 
     return(
         <Fragment>
-            <div className="container">
+            <div className="flex flex-col justify-center items-center">
                <Carp/> 
             </div>
             

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .container{
      background-color: #ef105e ;
      width: 1000vh;
@@ -15,10 +14,11 @@
     padding-top: 35vh;
     background-color: rgba(18, 17, 17, 0.895);
 }
-.asideCont, .cont-section{
+.asideCont, .cont-section, .sect-contenido, .boton, .cart input{
      border-radius: 18px;
      text-align: center; 
 }
+
 /* section */
 .cont-section{
     width: 150vh;
@@ -40,17 +40,15 @@
     width: 110vh;
     height: 90vh;
     margin-right: 240px;
-    background-color: #ef105e;
+    background-color: #c992a5;
 }
 /* carp */
-/* .cart{
-    width: 300px;
-    height:100%;
+.cart{
+    width: fit-content;
+    height:fit-content;
     padding: 35px;
-    
+     background-color: #ef105e ;
 }
-.cart input{
-    width: 35vh;
-    height: 15vh;
-    border: none;
-} */
+.item{
+    resize: none;
+}
