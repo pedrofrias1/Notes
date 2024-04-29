@@ -1,0 +1,33 @@
+.login-cont{
+    background-color: rgb(59, 67, 66);
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 40vh auto;
+    padding: 10px 15px;
+}
+.inp{
+    padding: 6px 6px;
+    width: 35vh;
+    border: none;
+}
+.inp:hover{
+    border-bottom: 4px solid rgb(124, 50, 98);
+}
+.sesion{
+   background-color: rgb(124, 50, 98) !important;
+   padding: 6px 6px;
+}
+.registro{
+    color: rgb(124, 50, 98);
+}
+
+.login-cont input{
+    background-color: gray;
+}
+
+img{
+    width: 20vh;
+    background-color: rgba(128, 128, 128, 0.801);
+    padding: 10px 15px;
+}

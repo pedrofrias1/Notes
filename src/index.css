@@ -2,53 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
-     background-color: #ef105e ;
-     width: 1000vh;
-     height: 100%;
-     color: #fff;
+/* page inicio */
+body{
+    background-color: rgba(0, 0, 0, 0.947);
+    color: #ccc;
 }
-.asideCont{
-    width: 300px;
-    height: 100vh;
-    padding-top: 35vh;
-    background-color: rgba(18, 17, 17, 0.895);
+.boton-inicio, .btn-empezar, .create-carp, .box{
+    border-radius: 18px;
+    padding: 8px 8px;
+    color: black;
 }
-.asideCont, .cont-section, .sect-contenido, .boton, .cart input{
-     border-radius: 18px;
-     text-align: center; 
+/* nav page inicio */
+.boton-inicio{
+    background-color: rgba(139, 0, 139, 0.886);
+}
+/* main page inicio */
+.line{
+    border-bottom: 1px white solid;
+}
+.cont-main{
+    width: 350px;
+}
+.img-main{
+    width: 30vh;
+    height: 30vh;
+}
+.btn-empezar{
+    background-color: rgb(200, 147, 156);
+    width: 20vh;
 }
 
-/* section */
+/* page carpeta */
+.container{
+    height: 100vh;
+    /* padding: 10px 40px; */
+    /* padding-left: 4px; */
+}
+.asideCont{
+    width: fit-content;
+    height: 80vh;
+    background-color: rgba(1, 1, 1, 0.963);
+    padding: 50px 40px;
+    margin-left: 20px;
+    border-radius: 18px 0 0 18px;
+}
+.ul-carp{
+    width: 40vh;
+    /* text-align: center; */
+}
+.titulo-carp{
+    width: max-content;
+    /* border: solid green 1px; */
+    color: purple;
+}
+/* page home section  */
 .cont-section{
-    width: 150vh;
-    background-color: rgba(18, 17, 17, 0.813);
+    height: 80vh; 
+    border-radius: 0 18px 18px 0;
+    background-color: #24222237;
 }
-.boton{
-    background-color: #ef105e ;
-    height: fit-content;
-    width: fit-content;
-    border: none;
-    padding: 5px;
-    border-radius: 18px;
-    box-shadow: 2px 2px 2px gray;
+.section{
+    width: 100vh;
 }
-.div-sect{
-    gap: 50vh;
+.create-carp{
+    background-color: purple;
 }
-.sect-contenido{
-    width: 110vh;
-    height: 90vh;
-    margin-right: 240px;
-    background-color: #c992a5;
+.box{
+    background-color: purple;
+    margin: 5px;
 }
-/* carp */
-.cart{
-    width: fit-content;
-    height:fit-content;
-    padding: 35px;
-     background-color: #ef105e ;
-}
-.item{
-    resize: none;
+
+@media screen and (max-width:800px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        height:70vh ;
+    }
+    .asideCont{
+        width: 100%;
+        padding: 0;
+    }
+    .section{
+        width: 100%;
+    }
 }
