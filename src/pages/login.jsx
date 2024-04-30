@@ -11,7 +11,7 @@ function Login(){
     const [loginPassword, setLoginPassword]=useState('')
     const navigateTo=useNavigate()
 
-    console.log(loginUserName);
+    // console.log(loginUserName);
     const loginUser=(e)=>{
         e.preventDefault()
         Axios.post('http://localhost:3002/login',{

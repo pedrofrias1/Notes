@@ -1,0 +1,10 @@
+.cart{
+    background-color: rgba(128, 128, 128, 0.801);
+    padding: 10px 8px;
+    color: black;
+}
+input{
+    background-color: blueviolet;
+    border-radius: 8px;
+    padding: 8px 8px;
+}

@@ -17,10 +17,17 @@
 .sesion{
    background-color: rgb(124, 50, 98) !important;
    padding: 6px 6px;
+   text-align: center;
+   border-radius: 8px;
+   margin-top: 8px;
 }
 .registro{
     color: rgb(124, 50, 98);
 }
+.div-span{
+    margin-top: 8px;
+}
+
 
 .login-cont input{
     background-color: gray;

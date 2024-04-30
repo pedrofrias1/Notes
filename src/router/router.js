@@ -4,6 +4,7 @@ import Carpeta from "../carpeta";
 import Inicio from "../inicio";
 import Login from "../pages/login";
 import Register from "../pages/register";
+import Formulario from "../components/formulario/form";
 
 function Router(params) {
     return(
@@ -14,6 +15,7 @@ function Router(params) {
             <Route path="/login" element={<Login/>}/>
             <Route path="/registro" element={<Register/>}/>
             <Route path="/carpeta" element={<Carpeta/>}/>
+            <Route path="/form" element={<Formulario/>}/>
         </Routes>
         </BrowserRouter>
     )

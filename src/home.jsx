@@ -1,9 +1,12 @@
-import { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Fragment, useState, useEffect } from "react";
 import "./index.css"
 import Section from "./components/section";
+// import Main from "./components/homepage/main";
+import { Link } from "react-router-dom";
 
 function Home(){
+  
+
     const [carpetas, setCarpetas]=useState([]);
 
     // const [user, setUser]=useState("");
@@ -23,6 +26,7 @@ function Home(){
    
     return(
         <Fragment>
+          <Fragment>
             <main className="container flex justify-center items-center">
              <aside className="flex flex-col justify-start items-center asideCont ">
                 <h3 className="font-semibold">Usuario</h3>
@@ -41,6 +45,12 @@ function Home(){
                 
 
             </main>
+        </Fragment>
+             
+        
+                
+
+            
         </Fragment>
     )
 }

@@ -1,12 +1,12 @@
 import { Fragment, useState } from "react";
-
+import "./components.css"
 function Carp(){
 
     
     // const [metodo, setMetodo]=useState("");
     const [opOk, setOpOk]= useState(false);
 
-    const cargargarCarpeta=async(event)=>{
+    const cargarCarpeta=async(event)=>{
         event.preventDefault();
         const form ={
             "titulo":event.target[0].value,
@@ -36,16 +36,15 @@ function Carp(){
                 <h3 className="font-bold text-2xl pb-3">Carpeta</h3>
             {  opOk === false?
             
-            <form action="http://localhost:5000/cargarCarpeta" onSubmit={(event)=>cargargarCarpeta(event)} method="POST">
+            <form action="http://localhost:5000/cargarCarpeta" onSubmit={(event)=>cargarCarpeta(event)} method="POST">
                 <div className="flex flex-col gap-2">
                      <textarea className="item text-2xl font-semibold" placeholder="Ingrese su nombre de carpeta" autoComplete="off" name="titulo" id="titulo" cols="35" rows="5" required></textarea>
                      <textarea className="item text-2xl font-semibold" placeholder="descripción" autoComplete="off" name="description" id="description" cols="35" rows="5" required></textarea>
                 </div>
                   
                 <div className="flex justify-center items-end gap-2 pt-3">
-                   <i className="bi bi-x-square-fill text-2xl"></i>
-                   <i className="bi bi-floppy text-2xl"></i> 
-                   <input type="submit" value="enviar" />
+                    <input type="submit" value="cargar" className="font-semibold"/> 
+                   
                 </div>    
                 </form>:
                 <p>Carpeta cargada exitosamente</p>

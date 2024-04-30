@@ -1,41 +1,53 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Tarjetas from "./tarjetas";
 
-function Section({carp}){
+
+function Section(){
+    
+    const[carpetaEliminada, setCarpetaEliminada]=useState(false);
+    
+
+    const [carpetas, setCarpetas]=useState([]);
+
+    // const [user, setUser]=useState("");
+
+    const traerCarpeta=async()=>{
+        await fetch("http://localhost:5000/")
+        .then((res)=>{return res.json()})
+        .then((data)=>{setCarpetas(data)})
+        .catch((err)=>{console.log(err)})
+        
+    }
+
+    useEffect(()=>{
+        traerCarpeta()
+    },[])
+
    
-    const [carpe, setCarpe]=useState(false);
-
+console.log(carpetas);
   
 
     return(
         <Fragment>
-            <div className="flex flex-col section">
+        
+           
+           <div className="flex flex-col section">
                 <div className="flex justify-between items-center pt-5 pr-3 div-sect">
-                    { carpe === false ? 
-                    <h3 className="font-bold text-3xl">No tienes carpetas aún</h3>:
-                    <h3>{carp.titulo} </h3>
-                    }
+                   
+                    <h3 className="font-bold text-3xl">Carpetas:</h3>
+                    
                 
                 <Link to="/carpeta" className="boton font-semibold create-carp">Crear carpeta +</Link>
-            </div>
+                </div>
 
-            <div className="sect-contenido">
-                <ul>
-                    {
-                        carp.map((car)=>{
-
-                            return <ul>
-                                    <div className="box flex flex-col justify-start items-start gap-1">
-                                        <h4 className="font-semibold">Carpeta: <span className="font-bold text">{car.titulo}</span></h4>
-                                        <li className="description">{car.description} </li>
-                                    </div>    
-                                   </ul>
-                           
-                        })
-                    }
-                </ul>
+                <div className="sect-contenido">
+                 
+                            <Tarjetas carpeta={carpetas} />
+                      
                     
-            </div>
+                 
+                </div>
             </div>
             
         </Fragment>

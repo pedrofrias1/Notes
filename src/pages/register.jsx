@@ -47,7 +47,10 @@ function Register(){
                         <input type="password"  placeholder="********" onChange={(event)=>setPassword(event.target.value)}  className=" inp" />
                         <Link to="/login" type="submit" className="sesion" onClick={createUser}>Iniciar sesion</Link>
                         
-                         <span className="flex items-center gap-2">¿ No tiene cuenta ?<Link to="/login" className="registro font-semibold">Inicia sesión</Link></span>
+                        <div className="flex items-center div-span">
+                           <span className="flex items-center gap-2">¿ Ya esta registrado ?<Link to="/login" className="registro font-semibold">Inicia sesión</Link></span> 
+                        </div>
+                         
                         </div>
                         </form>
                        
