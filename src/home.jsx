@@ -3,6 +3,7 @@ import "./index.css"
 import Section from "./components/section";
 // import Main from "./components/homepage/main";
 import { Link } from "react-router-dom";
+import Nav from "./components/homePage/nav"
 
 function Home(){
   
@@ -27,6 +28,7 @@ function Home(){
     return(
         <Fragment>
           <Fragment>
+            <Nav/>
             <main className="container flex justify-center items-center">
              <aside className="flex flex-col justify-start items-center asideCont ">
                 <h3 className="font-semibold">Usuario</h3>

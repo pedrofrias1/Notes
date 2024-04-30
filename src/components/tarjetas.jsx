@@ -2,9 +2,8 @@ import { useState } from "react";
 
 
 function Tarjetas({carpeta,setMostrarForm}) {
-    // console.log(carpetas);
 
-    const [metodo , setMetodo]=useState("");
+   
     const [carpetaEliminada, setCarpetaEliminada]=useState(false);
     // const [editarCarpeta, setEditarCarpeta]=useState(false)
 

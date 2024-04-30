@@ -4,7 +4,7 @@ function Carp(){
 
     
     // const [metodo, setMetodo]=useState("");
-    const [opOk, setOpOk]= useState(false);
+    const [opOk, setOpOk]= useState("");
 
     const cargarCarpeta=async(event)=>{
         event.preventDefault();
@@ -34,7 +34,7 @@ function Carp(){
         <Fragment>
             <div className="cart flex flex-col justify-center items-start mt-5">
                 <h3 className="font-bold text-2xl pb-3">Carpeta</h3>
-            {  opOk === false?
+            {  opOk === ""?
             
             <form action="http://localhost:5000/cargarCarpeta" onSubmit={(event)=>cargarCarpeta(event)} method="POST">
                 <div className="flex flex-col gap-2">
@@ -43,6 +43,7 @@ function Carp(){
                 </div>
                   
                 <div className="flex justify-center items-end gap-2 pt-3">
+                    
                     <input type="submit" value="cargar" className="font-semibold"/> 
                    
                 </div>    
